@@ -1,0 +1,97 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "cppbuild",
+			"label": "C/C++: Build with GCC (g++) 12.1.0",
+			"command": "C:\\Compilers\\mingw64\\bin\\g++.exe",
+			"args": [
+				"-fdiagnostics-color=always",
+				"-g",
+				"-std=c++20",
+				"${file}",
+				"-o",
+				"${fileDirname}\\${fileBasenameNoExtension}.exe"
+			],
+			"presentation": {
+				"echo": true,
+				"reveal": "always",
+				"focus": false,
+				"panel": "shared",
+				"showReuseMessage": true,
+				"clear": true
+			},
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"detail": "compiler: C:\\Compilers\\mingw64\\bin\\g++.exe"
+		},
+		{
+			"label": "cpp-run-after-default-build",
+			"type": "process",
+			"command": "${fileDirname}\\${fileBasenameNoExtension}.exe",
+			"dependsOrder": "sequence",
+			"dependsOn":[
+				"C/C++: Build with GCC (g++) 12.1.0"
+			],
+			"presentation": {
+				"echo": true,
+				"reveal": "always",
+				"focus": true,
+				"panel": "shared",
+				"showReuseMessage": false,
+				"clear": true
+			},
+			"options": {
+				"cwd": "${fileDirname}"
+			}
+		},
+		{
+			"label": "C/C++: Test using GCC (g++) 12.1.0",
+			"type": "shell",
+			"command": "rm",
+			"args": [
+				"${fileDirname}\\${fileBasenameNoExtension}.exe"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"dependsOrder": "sequence",
+			"dependsOn": "cpp-run-after-default-build",
+			"presentation": {
+				"echo": true,
+				"reveal": "always",
+				"focus": false,
+				"panel": "shared",
+				"showReuseMessage": true,
+				"clear": false
+			}
+
+		},
+		{
+			"type": "cppbuild",
+			"label": "C/C++: Build with clang++.exe 14.0.4",
+			"command": "C:\\Compilers\\mingw64\\bin\\clang++.exe",
+			"args": [
+				"-fdiagnostics-color=always",
+				"-g",
+				"-std=c++20",
+				"${file}",
+				"-o",
+				"${fileDirname}\\${fileBasenameNoExtension}.exe"
+			],
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": "build",
+			"detail": "compiler: C:\\Compilers\\mingw64\\bin\\clang++.exe"
+		}
+	]
+}
