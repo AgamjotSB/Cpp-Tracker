@@ -6,9 +6,9 @@ double subtract(float num1, float num2) { return num1 - num2; };
 double multiply(float num1, float num2) { return num1 * num2; };
 double divide(float num1, float num2) { return num1 / num2; };
 
-int num1, num2;
-char symbol;
 int main(){
+    int num1, num2;
+    char symbol;
     while (true)
     {
         cin >> num1 >> symbol >>num2;
