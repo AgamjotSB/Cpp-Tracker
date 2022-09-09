@@ -14,15 +14,13 @@ int main()
     // double / float division
     cout << 5.0 / 2 << endl; // result 2.5
     // double / float division
-    cout << 5/2.0 << endl; // result 2.5
+    cout << 5 / 2.0 << endl; // result 2.5
     // modulus
-    cout << 5%2 << endl; //result 1
-
+    cout << 5 % 2 << endl; // result 1
 
     // increment
     int total = 1;
     cout << total++ << endl; // result 2
     // decrement variable--
-    //specific value done by += or -=
-
+    // specific value done by += or -=
 }
